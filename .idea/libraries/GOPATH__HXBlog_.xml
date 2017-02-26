@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;HXBlog&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../write-webapps-in-go-video" />
+      <root url="file://$PROJECT_DIR$/../ToDoApp" />
+      <root url="file://$PROJECT_DIR$/../GoWebProgramming" />
+      <root url="file://$PROJECT_DIR$/../HXBlogTemplate" />
+      <root url="file://$PROJECT_DIR$/../LeetCode" />
+      <root url="file://$PROJECT_DIR$/../go-web-foundation" />
+      <root url="file://$PROJECT_DIR$/../code.google.com" />
+      <root url="file://$PROJECT_DIR$/../MyLeanote" />
+      <root url="file://$PROJECT_DIR$/../tns-restful-json-api" />
+      <root url="file://$PROJECT_DIR$/../.idea" />
+      <root url="file://$PROJECT_DIR$/../GoWeb" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../TheGoLang" />
+      <root url="file://$PROJECT_DIR$/../gopl.io" />
+      <root url="file://$PROJECT_DIR$/../beegoblog" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../write-webapps-in-go-video" />
+      <root url="file://$PROJECT_DIR$/../ToDoApp" />
+      <root url="file://$PROJECT_DIR$/../GoWebProgramming" />
+      <root url="file://$PROJECT_DIR$/../HXBlogTemplate" />
+      <root url="file://$PROJECT_DIR$/../LeetCode" />
+      <root url="file://$PROJECT_DIR$/../go-web-foundation" />
+      <root url="file://$PROJECT_DIR$/../code.google.com" />
+      <root url="file://$PROJECT_DIR$/../MyLeanote" />
+      <root url="file://$PROJECT_DIR$/../tns-restful-json-api" />
+      <root url="file://$PROJECT_DIR$/../.idea" />
+      <root url="file://$PROJECT_DIR$/../GoWeb" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../TheGoLang" />
+      <root url="file://$PROJECT_DIR$/../gopl.io" />
+      <root url="file://$PROJECT_DIR$/../beegoblog" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

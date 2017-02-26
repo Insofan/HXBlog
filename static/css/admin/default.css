@@ -1,0 +1,117 @@
+html, body{
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #f3f3f4;
+	color: #676a6c;
+	height:100%;
+}
+
+
+.box{
+	border:1px red dotted;
+}
+
+#side-menu{
+	background-color: #2f4050;
+	padding:0px;
+}
+
+#side-menu h1{
+	color: #1f3647;
+	text-align: center;
+	margin: 10px 0px;
+	font-size: 25px;
+}
+
+.display-table{
+	display: table;
+width: 100%;
+	padding:0px;
+	height:100%;
+}
+
+.display-table-row{
+	display: table-row;
+	height:100%;
+}
+
+.display-table-cell{
+	display: table-cell;
+	float: none;
+	height:100%;
+}
+
+.valign-top{
+	vertical-align: top;
+}
+
+#nav-header {
+	background-color: #fff;
+	border-bottom: 1px solid #e7eaec;
+}
+
+#nav-header #header-search-field {
+	padding-top: 17px;
+	vertical-align: center;
+	border: none;
+	width: 300px;
+	outline: none;
+}
+
+#nav-header ul{
+	margin:0px;
+	margin-right: 50px;
+	padding:0px;
+	list-style: none;
+	color: #676a6c;
+}
+
+#nav-header ul li{
+	float: left;
+	margin-left:15px;
+	padding:17px 0px;
+}
+
+#nav-header ul .glyphicon{
+	color: #676a6c;
+}
+
+.label-message{
+	background-color: #1ab394;
+}
+
+#nav-header ul a{
+	text-decoration: none;
+}
+
+#nav-header .logout{
+	color: #676a6c;
+}
+#nav-header .logout:hover{
+	color: #676a6c;
+}
+
+#nav-header #welcome {
+	margin-right: 20px;
+	font-size: 18px;
+}
+
+#nav-header ul .label {
+	margin-top: -10px;
+	margin-left: 2px;
+	position: absolute;
+}
+
+#nav-header .fixd-width{
+	width: 35px;
+}
+
+#admin-footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	color: #676a6c;
+
+}

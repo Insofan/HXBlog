@@ -1,0 +1,18 @@
+html, body {
+    /*因为html和body不是100填充 所以线设定百分百*/
+    height:100%;
+}
+.container {
+    display: table;
+    max-width:400px;
+    /*因为html和body不是100填充 所以先设定百分百*/
+    height:100%;
+    min-height:100%;
+}
+.form-signin {
+    display: table-cell;
+    vertical-align: middle;
+}
+.box{
+    border: 1px red dotted;
+}
