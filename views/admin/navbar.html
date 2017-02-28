@@ -1,0 +1,47 @@
+{{define "navbar"}}
+<div class="col-md-10 col-sm-11 display-table-cell valign-top">
+	<div class="row">
+		<header id="nav-header">
+			<div class="col-md-5">
+				<nav class="navbar-default pull-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"
+					        data-target="#side-menu" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</nav>
+				<input class="hidden-sm hidden-xs" id="header-search-field" type="text" placeholder="搜索文章">
+			</div>
+			<div class="col-md-7">
+				<ul class="pull-right">
+					<li class="hidden-xs" id="welcome">欢迎来到管理后台</li>
+					
+					<li class="fixd-width">
+						<a href="#">
+							<span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+							<span class="label label-warning">3</span>
+						</a>
+					</li>
+					
+					<li class="fixd-width">
+						<a href="#">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<span class="label label-message">3</span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="#" class="logout">
+							<span class="glyphicon glyphicon-log-out" aria-hidden="true"> 登出</span>
+						</a>
+					</li>
+				
+				</ul>
+			</div>
+		</header>
+	</div>
+	
+
+{{end}}
