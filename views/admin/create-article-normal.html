@@ -1,7 +1,6 @@
 {{template "head"}}
 <link rel="stylesheet" href="../../static/css/admin/create-article.css">
 <link rel="stylesheet" href="../../static/css/chosen.min.css">
-
 </head>
 <body>
 <div class="container-fluid display-table">
@@ -32,37 +31,36 @@
 								<option>Go</option>
 								<option>杂项</option>
 							</select>
-							
+						
 						</div>
 					</form>
 					
 					<form>
 						<div class="form-group">
 							<label class="sr-only">内容</label>
-							<textarea class="form-control" placeholder="文章内容" name="article">
-							</textarea>
+							<textarea class="form-control" placeholder="文章内容" name="article"  ></textarea>
 						</div>
 						
 						<div class="checkbox">
 							<label>
-								<input type="checkbox">保存并发布
+								<input type="checkbox">公开
 							</label>
 						</div>
 						
 						<div class="clearfix">
 							<button type="submit" class="btn btn-primary pull-right">保存 / 发布</button>
 						</div>
-						
+					
 					</form>
 				</div>
+			</div>
+			<div class="row">
+				<footer id="admin-footer" class="clearfix">
+					<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
+					<div class="pull-right">后台管理</div>
+				</footer>
+			</div>
 		</div>
-		<div class="row">
-			<footer id="admin-footer" class="clearfix">
-				<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
-				<div class="pull-right">后台管理</div>
-			</footer>
-		</div>
-	</div>
 	</div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -72,17 +70,18 @@
 <script src="../../static/js/chosen.jquery.min.js"></script>
 
 <script type="text/javascript">
-	var config = {
-	    '.chosen-select' :{},
-		'.chosen-select-deselect' :{allow_allow_deselect:true},
-		'.chosen-select-no-single' :{disable_search_threshold:10},
-		'.chosen-select-no-result' :{no_result_text:'Oops, nothing found!'},
+    var config = {
+        '.chosen-select' :{},
+        '.chosen-select-deselect' :{allow_allow_deselect:true},
+        '.chosen-select-no-single' :{disable_search_threshold:10},
+        '.chosen-select-no-result' :{no_result_text:'Oops, nothing found!'},
         '.chosen-select-width' :{width:"95%"}
-	}
-	for (var selector in config) {
-	    $(selector).chosen(config[selector]);
-	}
+    }
+    for (var selector in config) {
+        $(selector).chosen(config[selector]);
+    }
 </script>
+
 
 </body>
 </html>
