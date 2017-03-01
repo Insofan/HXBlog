@@ -2,3 +2,12 @@
 	background-color: #eee;
 	padding:20px;
 }
+
+.note-editable {
+	background-color: #fff;
+}
+
+/*chosen-container chosen-container-multi chosen-with-drop chosen-container-active*/
+.chosen-container, .chosen-container-multi{
+	width: 100% !important;
+}

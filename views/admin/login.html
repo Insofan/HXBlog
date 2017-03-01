@@ -3,26 +3,48 @@
 <!-- Bootstrap -->
 <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../static/css/default/login.css" rel="stylesheet">
+<script type="text/javascript">
+    function validateAccount() {
+        var un = document.getElementById("username").value;
+        var pw = document.getElementById("password").value;
+        var username = "admin";
+        var password = "admin";
+        if ((un == username) && (pw == password)) {
+            window.location.href = "/admin";
+            return false;
+        }
+        else {
+            alert("Login was unsuccessful, please check your username and password");
+        }
+    }
+
+    function backHome() {
+        window.location.href = "/";
+        return false;
+    }
+</script>
 </head>
 <body>
 <div class="container">
 	<!---->
-	<form class="form-signin">
+	<form class="form-signin" method="post" action="/login">
 		<!--让Sign 居中-->
 		<h1 class="text-center">登 录</h1>
 		<p>
-			<label class="sr-only">Email address</label>
-			<input type="email" placeholder="Email" class="form-control" required autofocus>
+			<label class="sr-only">用户名</label>
+			<input id="username" name="username" type="text" placeholder="用户名" class="form-control" required autofocus>
 		</p>
 		<p>
-			<label class="sr-only">Password</label>
-			<input type="password" placeholder="Password" class="form-control" required>
+			<label class="sr-only">密码</label>
+			<input id="password" name="password" type="password" placeholder="密码" class="form-control" required>
 		</p>
 		
-		<p class="checkbox"><label><input type="checkbox">自动登录</label></p>
+		<p class="checkbox"><label><input name="autoLogin" type="checkbox">自动登录</label></p>
 		
-		<button type="submit" class="btn btn-info btn-block ">登录</button>
-		<button  class="btn btn-warning btn-block" href="/">返回</button>
+		<button type="submit" class="btn btn-info btn-block" onclick="return validateAccount()" >登录</button>
+		<button class="btn btn-warning btn-block" onclick="return backHome()">返回</button>
+		
+	
 	</form>
 </div>
 

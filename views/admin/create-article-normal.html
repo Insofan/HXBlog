@@ -1,6 +1,10 @@
 {{template "head"}}
-<link rel="stylesheet" href="../../static/css/admin/create-article.css">
 <link rel="stylesheet" href="../../static/css/chosen.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../static/css/editor.css">
+<link rel="stylesheet" href="../../static/css/admin/create-article.css">
+
+
 </head>
 <body>
 <div class="container-fluid display-table">
@@ -38,7 +42,7 @@
 					<form>
 						<div class="form-group">
 							<label class="sr-only">内容</label>
-							<textarea class="form-control" placeholder="文章内容" name="article"  ></textarea>
+							<textarea class="form-control" placeholder="文章内容" name="article" id="textedit"></textarea>
 						</div>
 						
 						<div class="checkbox">
@@ -63,6 +67,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -81,7 +86,11 @@
         $(selector).chosen(config[selector]);
     }
 </script>
+<script src="../../static/js/editor.js"></script>
 
+<script>
+	$('#textedit').Editor();
+</script>
 
 </body>
 </html>

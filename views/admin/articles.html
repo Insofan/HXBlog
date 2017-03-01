@@ -1,0 +1,97 @@
+{{template "head"}}
+
+<title>Articles</title>
+<link rel="stylesheet" href="../../static/css/admin/default.css">
+<link rel="stylesheet" href="../../static/css/admin/articles.css">
+
+</head>
+<body>
+<div class="container-fluid display-table">
+	<div class="row display-table-row">
+		{{template "sideMenu"}}
+		{{template "navbar"}}
+		<!--main content area-->
+		
+		<div id="content">
+			<header class="clearfix">
+				<h2 class="page-title pull-left">All articles</h2>
+				<button type="button" class="btn btn-xs btn-primary pull-right">Create new article</button>
+			</header>
+			
+			<div class="content-inner">
+				<div class="row search-row">
+					<div class="col-md-12">
+						<div class="input-group">
+							<input type="text" class="form-control search-field" id="search" placeholder="Search">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-primary">Go!</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row article-row">
+					<div class="col-md-1 col-sm-1 col-xs-2 status-padding">
+						<span class="label label-success label-sm">Active</span>
+					</div>
+					
+					<div class="col-md-8 col-sm-6 col-xs-10 article-title">
+						<p>Haixiao ......................</p>
+						<small>Created 15th 2915</small>
+					</div>
+					<div class="col-md-3 col-sm-5 col-xs-10 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+						<div class="active-actions">
+							<a class="btn btn-xs btn-default" href="#" role="button">
+								<span class="glyphicon glyphicon-folder-open" aria-hidden="true">&nbsp;View</span>
+							</a>
+							
+							<a class="btn btn-xs btn-default" href="#" role="button">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;Edit</span>
+							</a>
+							
+							<a class="btn btn-xs btn-default" href="#" role="button">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true">&nbsp;Delete</span>
+							</a>
+						
+						</div>
+					
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-12">
+							<nav>
+								<ul class="pagination">
+									<li><a href="#">&laquo;</a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">&raquo;</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<footer id="admin-footer" class="clearfix">
+						<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
+						<div class="pull-right">后台管理</div>
+					</footer>
+				</div>
+			
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/js/chosen.jquery.min.js"></script>
+</body>
+</html>

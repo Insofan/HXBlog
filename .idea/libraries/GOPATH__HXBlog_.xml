@@ -10,13 +10,16 @@
       <root url="file://$PROJECT_DIR$/../LeetCode" />
       <root url="file://$PROJECT_DIR$/../go-web-foundation" />
       <root url="file://$PROJECT_DIR$/../code.google.com" />
+      <root url="file://$PROJECT_DIR$/../legolas-blog" />
       <root url="file://$PROJECT_DIR$/../MyLeanote" />
       <root url="file://$PROJECT_DIR$/../tns-restful-json-api" />
       <root url="file://$PROJECT_DIR$/../.idea" />
       <root url="file://$PROJECT_DIR$/../GoWeb" />
       <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../goblog" />
       <root url="file://$PROJECT_DIR$/../TheGoLang" />
       <root url="file://$PROJECT_DIR$/../gopl.io" />
+      <root url="file://$PROJECT_DIR$/../golang-blog" />
       <root url="file://$PROJECT_DIR$/../beegoblog" />
     </CLASSES>
     <SOURCES>
@@ -29,13 +32,16 @@
       <root url="file://$PROJECT_DIR$/../LeetCode" />
       <root url="file://$PROJECT_DIR$/../go-web-foundation" />
       <root url="file://$PROJECT_DIR$/../code.google.com" />
+      <root url="file://$PROJECT_DIR$/../legolas-blog" />
       <root url="file://$PROJECT_DIR$/../MyLeanote" />
       <root url="file://$PROJECT_DIR$/../tns-restful-json-api" />
       <root url="file://$PROJECT_DIR$/../.idea" />
       <root url="file://$PROJECT_DIR$/../GoWeb" />
       <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../goblog" />
       <root url="file://$PROJECT_DIR$/../TheGoLang" />
       <root url="file://$PROJECT_DIR$/../gopl.io" />
+      <root url="file://$PROJECT_DIR$/../golang-blog" />
       <root url="file://$PROJECT_DIR$/../beegoblog" />
     </SOURCES>
     <excluded>

@@ -1,0 +1,103 @@
+.content-inner {
+	padding:20px;
+}
+.search-field {
+	height:30px;
+	border: 1px #e7eaec solid;
+}
+.search-row{
+	margin-bottom: 31px;
+}
+
+.btn-primary{
+	background-color: #1ab394;
+	border: 1px solid #1ab394;
+}
+
+.btn-primary:hover{
+	background-color: #1cc394;
+	border: 1px solid #1cc394;
+}
+
+.btn-primary:focus{
+	background-color: #1cc394;
+	border: 1px solid #1cc394;
+}
+
+.go{
+	height:30px;
+}
+
+.label-success{
+	background-color: #1ab394;
+}
+
+.label-lg {
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.33;
+	border-radius: 6px;
+}
+
+.label-sm{
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.label-xs{
+	padding: 1px 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.pagination a {
+	color: #1ab394 !important;
+}
+
+.btn-default{
+	color: #676a6c;
+	border:1px #eee solid;
+}
+
+.btn-default:hover{
+	background-color: #f3f3f4;
+	color: #676a6c;
+	border:1px #eee solid;
+}
+
+.article-row p{
+	font-size: 16px;
+	margin-bottom: 0px;
+	font-weight: 400;
+}
+
+.status-padding {
+	padding-top: 10px;
+}
+
+.article-title small{
+	color: #bbb;
+}
+
+@media (max-width: 991px) {
+	.article-title{
+		padding-left: 30px;
+	}
+}
+
+@media (min-width: 767px) {
+	.article-actions{
+		float: right;
+	}
+}
+
+@media (max-width: 767px) {
+	.article-actions{
+		/*padding-left: 10px;*/
+		margin-top: 10px;
+	}
+	
+}
