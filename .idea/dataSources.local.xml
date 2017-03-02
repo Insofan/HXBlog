@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db_hxblog@localhost" uuid="c427dcef-28a1-470f-a1cb-ec1c77880ad7">
-      <database-info product="MySQL" version="5.7.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+    <data-source name="db_hxblog@localhost" uuid="4da0c733-ca01-4ef1-bda0-e912cd9c6189">
+      <database-info product="MySQL" version="5.7.17-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <resolve-scope>db_hxblog:</resolve-scope>

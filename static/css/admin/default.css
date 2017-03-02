@@ -4,6 +4,9 @@ html, body{
 	color: #676a6c;
 	height:100%;
 }
+#admin-form {
+	height: 100%;
+}
 
 
 .box{
