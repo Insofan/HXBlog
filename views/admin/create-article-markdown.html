@@ -6,8 +6,8 @@
 <body>
 <div class="container-fluid display-table">
 	<div class="row display-table-row">
-		{{template "sideMenu"}}
-		{{template "navbar"}}
+		{{template "sideMenu" .}}
+		{{template "navbar" .}}
 		<!--main content area-->
 		
 		<div id="content">
@@ -27,12 +27,11 @@
 						<div class="form-group">
 							<label class="sr-only">标签</label>
 							<select data-placeholder="选择标签" multiple name="tags" class="form-control chosen-select">
-								<option>Objective-C</option>
-								<option>Swift</option>
-								<option>Go</option>
-								<option>杂项</option>
+								{{range .Category}}
+								<option>{{.Title}}</option>
+								{{end}}
 							</select>
-							
+						
 						</div>
 					</form>
 					

@@ -5,8 +5,8 @@ import (
 	"strings"
 	"HXBlog/models"
 	"fmt"
+	"os/user"
 )
-
 
 type LoginController struct {
 	beego.Controller
@@ -24,11 +24,13 @@ func (self *LoginController) Login() {
 	
 	var user models.User
 	
-	if user.CheckAccount(username, password) != nil {
+	if user.LoginValidation(username, password) != nil {
 		self.Redirect("/login", 302)
 		fmt.Println("找不到")
 	} else {
 		fmt.Println("loginright")
-		self.TplName = "admin/admin.html"
+		//self.TplName = "admin/admin.html"
+		self.Redirect("/admin", 302)
 	}
 }
+

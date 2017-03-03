@@ -1,12 +1,12 @@
 {{define "sideMenu"}}
 
-<div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top " id="side-menu">
+<div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top " id="side-menu" >
 	<h1 class="hidden-xs hidden-sm" style="color: burlywood;">控制台</h1>
 	<ul>
 		<li class="link">
-			<a href="admin.html">
+			<a href="/admin">
 				<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-				<span class="hidden-xs hidden-sm">最新</span>
+				<span class="hidden-xs hidden-sm">控制台</span>
 			</a>
 		</li>
 		
@@ -17,7 +17,7 @@
 				<span class="label label-success pull-right hidden-xs hidden-sm">20</span>
 			</a>
 			<ul class="collapse collapseable" id="collapse-post">
-				<li><a href="articles.html">浏览</a></li>
+				<li><a href="/admin/articles.html">浏览</a></li>
 			</ul>
 		</li>
 		
@@ -39,24 +39,18 @@
 				<span class="hidden-xs hidden-sm">分类</span>
 				<span class="label label-success pull-right hidden-xs hidden-sm"></span>
 			</a>
+			
 			<ul class="collapse collapseable" id="collapse-comments">
-				<li><a href="approved.html">Swift<span
-						class="label label-success pull-right hidden-xs hidden-sm">10</span></a>
+				{{range .Category}}
+				<li><a href="/category/{{.Title}}">{{.Title}}<span class="label label-success pull-right hidden-xs hidden-sm">{{.Total}}</span></a>
 				</li>
-				<!--{{range .Categories}}-->
-				<!--&lt;!&ndash;<li><a href="#">{{.Title }}</a></li>&ndash;&gt;-->
-				<!--<p>{{.Title}}</p>-->
-				<!--{{end}}-->
-				
-				
-				<li role="separator" class="divider">
-				</li>
-				
-				<li><a name="plus">
-					<span class="glyphicon glyphicon-plus"></span>添加
-				</a>
-				</li>
+				{{end}}
+				<!--<li role="separator" class="divider"><a name="plus">-->
+					<!--<span class="glyphicon glyphicon-plus"></span>添加-->
+				<!--</a>-->
+				<!--</li>-->
 			</ul>
+		
 		</li>
 		
 		<li class="link">

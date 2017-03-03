@@ -6,6 +6,7 @@ type CreateArticleNormalController struct {
 	beego.Controller
 }
 
-func (c *CreateArticleNormalController) Get() {
-	c.TplName = "admin/create-article-normal.html"
+func (self *CreateArticleNormalController) Get() {
+	SetupSideMenu(self.Controller)
+	self.TplName = "admin/create-article-normal.html"
 }

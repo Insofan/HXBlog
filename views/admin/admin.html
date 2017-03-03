@@ -3,24 +3,19 @@
 </head>
 <body>
 
-<form id="admin-form" method="get">
-	<div class="container-fluid display-table">
+<!--<form class="admin-form" method="get">-->
+	<form class="container-fluid display-table">
 		<div class="row display-table-row">
 			
-			{{template "sideMenu"}}
-			{{template "navbar"}}
+			{{template "sideMenu" .}}
+			{{template "navbar" .}}
 			<!--main content area-->
-			
-			<div class="row">
-				<footer id="admin-footer" class="clearfix">
-					<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
-					<div class="pull-right">后台管理</div>
-				</footer>
-			</div>
+		
+			{{template "footer" .}}
+		
 		</div>
-	</div>
-
-</form>
+	</form>
+<!--</form>-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

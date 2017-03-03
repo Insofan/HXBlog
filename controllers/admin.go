@@ -3,7 +3,6 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"HXBlog/models"
-	"fmt"
 )
 
 type AdminController struct {
@@ -11,13 +10,12 @@ type AdminController struct {
 }
 
 func (self *AdminController) Get() {
-	
-	var err error
-	self.Data["Categories"], err = models.GetCategories()
-	if err != nil {
-		beego.Error(err)
-	}
-	fmt.Printf("adminget %s",self.Data["Categories"])
+	SetupSideMenu(self.Controller)
 	
 	self.TplName = "admin/admin.html"
+}
+
+func (self *AdminController) LogOut()  {
+	var user models.User
+	user.Logout()
 }

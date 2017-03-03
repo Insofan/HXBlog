@@ -4,8 +4,8 @@ html, body{
 	color: #676a6c;
 	height:100%;
 }
-#admin-form {
-	height: 100%;
+.admin-form {
+	height: 500px;
 }
 
 
@@ -279,4 +279,7 @@ width: 100%;
 
 .pagination a {
 	color: #1ab394 !important;
+}
+.display-table-row{
+	height: auto;
 }

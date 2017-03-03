@@ -6,7 +6,7 @@
 
 </head>
 <body>
-<div class="container-fluid display-table">
+<div class="container-fluid display-table" style="width: 100%">
 	<div class="row display-table-row">
 		{{template "sideMenu"}}
 		{{template "navbar"}}
@@ -73,17 +73,14 @@
 						</div>
 					</div>
 				</div>
-				
-				
-				<div class="row">
-					<footer id="admin-footer" class="clearfix">
-						<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
-						<div class="pull-right">后台管理</div>
-					</footer>
-				</div>
-			
-			
 			</div>
+			{{template "footer".}}
+			<!--<div class="row">-->
+				<!--<footer id="admin-footer" class="clearfix">-->
+					<!--<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>-->
+					<!--<div class="pull-right">{{.abc}}后台管理</div>-->
+				<!--</footer>-->
+			<!--</div>-->
 		</div>
 	</div>
 </div>

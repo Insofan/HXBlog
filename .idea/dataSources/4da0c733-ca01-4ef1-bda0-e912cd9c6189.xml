@@ -101,7 +101,7 @@
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="9" name="article_count">
+    <column id="28" parent="9" name="total">
       <Position>5</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
