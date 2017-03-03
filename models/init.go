@@ -23,7 +23,7 @@ var (
 func RegisterDB() {
 	
 	conn := dbuser + ":" + dbpassword + "@/" + dbname + "?charset=utf8&loc=Local"
-	orm.RegisterModel( new(User), new(Category))
+	orm.RegisterModel( new(User), new(Tag))
 	orm.RegisterDriver("mysql", orm.DRMySQL)
 	orm.RegisterDataBase("default", "mysql", conn, 10, 10)
 }

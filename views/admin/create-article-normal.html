@@ -7,64 +7,109 @@
 
 </head>
 <body>
-<div class="container-fluid display-table">
+<form method="post" class="container-fluid display-table">
 	<div class="row display-table-row">
 		{{template "sideMenu" .}}
-		{{template "navbar" .}}
-		<!--main content area-->
-		
-		<div id="content">
-			<header>
-				<h2 class="page-title">创建文章</h2>
-			</header>
-			<div class="content-inner">
-				<div class="form-wrapper">
-					<form>
-						<div class="form-group">
-							<label class="sr-only">标题</label>
-							<input type="text" class="form-control" id="title" placeholder="标题">
-						</div>
-					</form>
-					
-					<form>
-						<div class="form-group">
-							<label class="sr-only">标签</label>
-							<select data-placeholder="选择标签" multiple name="tags" class="form-control chosen-select">
-								{{range .Category}}
-								<option>{{.Title}}</option>
-								{{end}}
-							</select>
-						</div>
-					</form>
-					
-					<form>
-						<div class="form-group">
-							<label class="sr-only">内容</label>
-							<textarea class="form-control" placeholder="文章内容" name="article" id="textedit"></textarea>
-						</div>
-						
-						<div class="checkbox">
-							<label>
-								<input type="checkbox">公开
-							</label>
-						</div>
-						
-						<div class="clearfix">
-							<button type="submit" class="btn btn-primary pull-right">保存 / 发布</button>
-						</div>
-					
-					</form>
-				</div>
-			</div>
+		<div class="col-md-10 col-sm-11 display-table-cell valign-top">
 			<div class="row">
-				<footer id="admin-footer" class="clearfix">
-					<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
-					<div class="pull-right">后台管理</div>
-				</footer>
+				<header id="nav-header">
+					<div class="col-md-5">
+						<nav class="navbar-default pull-left">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"
+							        data-target="#side-menu" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</nav>
+						<input class="hidden-sm hidden-xs" id="header-search-field" type="text" placeholder="搜索文章">
+					</div>
+					<div class="col-md-7">
+						<ul class="pull-right">
+							<li class="hidden-xs" id="welcome">欢迎来到管理后台</li>
+							
+							<li class="fixd-width">
+								<a href="#">
+									<span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+									<span class="label label-warning">3</span>
+								</a>
+							</li>
+							
+							<li class="fixd-width">
+								<a href="#">
+									<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+									<span class="label label-message">3</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="/login" class="logout">
+									<button type="submit" class="btn btn-danger glyphicon glyphicon-log-out"
+									        aria-hidden="true">登出
+									</button>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+			</div>
+			<!--main content area-->
+			
+			<div id="content">
+				<header>
+					<h2 class="page-title">创建文章</h2>
+				</header>
+				<div class="content-inner">
+					<div class="form-wrapper">
+						<form>
+							<div class="form-group">
+								<label class="sr-only">标题</label>
+								<input type="text" class="form-control" id="title" placeholder="标题">
+							</div>
+						</form>
+						
+						<form>
+							<div class="form-group">
+								<label class="sr-only">标签</label>
+								<select data-placeholder="选择标签" multiple name="tags" class="form-control chosen-select">
+									{{range .Tag}}
+									<option>{{.Title}}</option>
+									{{end}}
+								</select>
+							</div>
+						</form>
+						
+						<form>
+							<div class="form-group">
+								<label class="sr-only">内容</label>
+								<textarea class="form-control" placeholder="文章内容" name="article"
+								          id="textedit"></textarea>
+							</div>
+							
+							<div class="checkbox">
+								<label>
+									<input type="checkbox">公开
+								</label>
+							</div>
+							
+							<div class="clearfix">
+								<button type="submit" class="btn btn-primary pull-right">保存 / 发布</button>
+							</div>
+						
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<footer id="admin-footer" class="clearfix">
+						<div class="pull-left"><b>Copyright </b> &copy; Haixiao 2017</div>
+						<div class="pull-right">后台管理</div>
+					</footer>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</form>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>

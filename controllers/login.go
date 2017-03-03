@@ -5,7 +5,6 @@ import (
 	"strings"
 	"HXBlog/models"
 	"fmt"
-	"os/user"
 )
 
 type LoginController struct {

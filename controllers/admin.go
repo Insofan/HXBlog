@@ -3,6 +3,7 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"HXBlog/models"
+	"fmt"
 )
 
 type AdminController struct {
@@ -15,7 +16,11 @@ func (self *AdminController) Get() {
 	self.TplName = "admin/admin.html"
 }
 
-func (self *AdminController) LogOut()  {
+func (self *AdminController) Post()  {
+	
+	fmt.Println("Logoutsucess")
+	self.Redirect("/login", 302)
 	var user models.User
 	user.Logout()
+	
 }
