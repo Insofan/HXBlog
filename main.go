@@ -15,6 +15,6 @@ func main() {
 	
 	orm.RunSyncdb("default", false, true)
 	
-	beego.Run()
+	beego.Run(":9000")
 }
 

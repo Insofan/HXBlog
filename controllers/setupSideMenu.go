@@ -6,10 +6,10 @@ import (
 )
 
 func SetupSideMenu(controller beego.Controller) {
-	var user models.User
-	if user.HasLogin() == 0 {
-		controller.Redirect("/login", 302)
-	}
+	//if models.CheckAccount(controller.Ctx) == false{
+	//
+	//	controller.Redirect("/login", 302)
+	//}
 	var err error
 	controller.Data["Tag"], err = models.GetTags()
 	if err != nil {

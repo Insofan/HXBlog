@@ -41,10 +41,9 @@
 							</li>
 							
 							<li>
-								<a class="logout">
+								<a href="/login" class="logout">
 									<button type="submit" class="btn btn-danger glyphicon glyphicon-log-out"
-									        aria-hidden="true">登出
-									</button>
+									        aria-hidden="true"><a href="/login?exit=true">登出</a></button>
 								</a>
 							</li>
 						</ul>
@@ -52,6 +51,9 @@
 				</header>
 			</div>
 			<!--main content area-->
+		
+		
+			<!--footer area-->
 			{{template "footer" .}}
 		</div>
 	</div>

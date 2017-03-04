@@ -69,6 +69,7 @@
 	border:1px #eee solid;
 }
 
+
 .article-row p{
 	font-size: 16px;
 	margin-bottom: 0px;
@@ -82,6 +83,7 @@
 .article-title small{
 	color: #bbb;
 }
+
 
 @media (max-width: 991px) {
 	.article-title{
@@ -100,5 +102,7 @@
 		/*padding-left: 10px;*/
 		margin-top: 10px;
 	}
-	
 }
+
+
+

@@ -2,6 +2,7 @@ package models
 
 import (
 	"github.com/astaxie/beego/orm"
+	"github.com/astaxie/beego/context"
 	"fmt"
 )
 
@@ -48,9 +49,16 @@ func (m *User) Logout() {
 	})
 }
 
-func (m *User) HasLogin() int8 {
-	o:= orm.NewOrm()
-	user := User{}
-	o.QueryTable("user").Filter("username", currentUsername).One(&user)
-	return user.IsLogin
+func CheckAccount(ctx *context.Context) bool {
+	ck, err := ctx.Request.Cookie("username")
+	//fmt.Printf("username and password : %s %s", username, password)
+	if err != nil {
+		fmt.Println("get error")
+		return false
+	}
+	
+	username := ck.Value
+	
+	return username == currentUsername
+	
 }

@@ -38,7 +38,7 @@
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="15" parent="8" name="tags">
+    <column id="15" parent="8" name="tag">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>

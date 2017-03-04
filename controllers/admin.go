@@ -16,11 +16,13 @@ func (self *AdminController) Get() {
 	self.TplName = "admin/admin.html"
 }
 
-func (self *AdminController) Post()  {
+func (self *AdminController) Post() {
 	
 	fmt.Println("Logoutsucess")
-	self.Redirect("/login", 302)
+	
 	var user models.User
 	user.Logout()
+	self.Redirect("/login", 302)
+	return
 	
 }

@@ -12,6 +12,12 @@ type LoginController struct {
 }
 
 func (self *LoginController) Get() {
+	if self.Input().Get("exit") == "true" {
+		self.Ctx.SetCookie("username", "", -1, "/")
+		self.Ctx.SetCookie("password","",-1, "/")
+		self.Redirect("/", 302)
+		return
+	}
 	self.TplName = "admin/login.html"
 }
 
@@ -26,10 +32,12 @@ func (self *LoginController) Login() {
 	if user.LoginValidation(username, password) != nil {
 		self.Redirect("/login", 302)
 		fmt.Println("找不到")
+		return
 	} else {
 		fmt.Println("loginright")
 		//self.TplName = "admin/admin.html"
 		self.Redirect("/admin", 302)
+		return
 	}
 }
 
