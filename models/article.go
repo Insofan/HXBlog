@@ -21,6 +21,7 @@ type Article struct {
 func CreateMarkdown(title, tag, content string) error {
 	o := orm.NewOrm()
 	var articleContent = string(blackfriday.MarkdownCommon([]byte(content)))
+	//unsafe := blackfriday.MarkdownCommon(content)
 	article := &Article{
 		Title:   title,
 		Content: articleContent,
@@ -30,7 +31,6 @@ func CreateMarkdown(title, tag, content string) error {
 		Updated: time.Now(),
 		Views:   0,
 	}
-	
 	_, err := o.Insert(article)
 	if err != nil {
 		beego.Error(err)
