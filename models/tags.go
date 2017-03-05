@@ -8,10 +8,13 @@ import (
 //结构体Category
 type Tag struct {
 	Id      int64
-	Title   string
+	Go      string
+	Swift   string
+	ObjC    string
+	Other   string
 	Created time.Time `orm:"index"`
 	Updated time.Time `orm:"index"`
-	Total   int64
+	Views   int64     `orm:"index"`
 }
 
 func GetTags() ([]*Tag, error) {

@@ -15,7 +15,7 @@
 			
 			<div id="content">
 				<header class="clearfix">
-					<h2 class="page-title pull-left">All articles</h2>
+					<h2 class="page-title pull-left">所有文章</h2>
 					<button type="button" class="btn btn-xs btn-primary pull-right">Create new article</button>
 				</header>
 				
@@ -35,7 +35,15 @@
 					<div class="row article-row">
 						
 						<div class="col-md-1 col-sm-1 col-xs-2 status-padding">
+							{{if eq .Tag "Go"}}
 							<span class="label label-success label-sm">{{ .Tag}}</span>
+							{{else if eq .Tag "Swift"}}
+							<span class="label label-warning label-sm">{{ .Tag}}</span>
+							{{else if eq .Tag "ObjC"}}
+							<span class="label label-info label-sm">{{ .Tag}}</span>
+							{{else if eq .Tag "Other"}}
+							<span class="label label-danger label-sm">{{ .Tag}}</span>
+							{{end}}
 						</div>
 						<div class="col-md-8 col-sm-6 col-xs-10 article-title">
 							<h4>{{ .Title }}</h4>
@@ -77,14 +85,14 @@
 									<li><a href="#">&raquo;</a></li>
 								</ul>
 							</nav>
-						
+							
 						</div>
 						
 					</div>
 					
+					{{template "footer" .}}
 				</div>
 				
-				{{template "footer" }}
 				
 			</div>
 		</div>

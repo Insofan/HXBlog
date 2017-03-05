@@ -79,77 +79,92 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="9" name="title">
+    <column id="24" parent="9" name="go">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="25" parent="9" name="created">
+    <column id="25" parent="9" name="swift">
       <Position>3</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="26" parent="9" name="updated">
+    <column id="26" parent="9" name="obj_c">
       <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="27" parent="9" name="other">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="9" name="created">
+      <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="9" name="total">
-      <Position>5</Position>
+    <column id="29" parent="9" name="updated">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="9" name="views">
+      <Position>8</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="28" parent="9" name="category_created">
+    <index id="31" parent="9" name="tag_created">
       <ColNames>created</ColNames>
     </index>
-    <index id="29" parent="9" name="category_updated">
+    <index id="32" parent="9" name="tag_updated">
       <ColNames>updated</ColNames>
     </index>
-    <index id="30" parent="9" name="tag_created">
-      <ColNames>created</ColNames>
+    <index id="33" parent="9" name="tag_views">
+      <ColNames>views</ColNames>
     </index>
-    <index id="31" parent="9" name="tag_updated">
-      <ColNames>updated</ColNames>
-    </index>
-    <key id="32" parent="9" name="PRIMARY">
+    <key id="34" parent="9" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="33" parent="10" name="id">
+    <column id="35" parent="10" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="34" parent="10" name="username">
+    <column id="36" parent="10" name="username">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="35" parent="10" name="password">
+    <column id="37" parent="10" name="password">
       <Position>3</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="36" parent="10" name="is_login">
+    <column id="38" parent="10" name="is_login">
       <Position>4</Position>
       <DataType>tinyint(4)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="37" parent="10" name="username">
+    <index id="39" parent="10" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="38" parent="10" name="PRIMARY">
+    <key id="40" parent="10" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="39" parent="10" name="username">
+    <key id="41" parent="10" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
