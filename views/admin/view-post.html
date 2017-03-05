@@ -1,0 +1,53 @@
+{{template "head"}}
+<link rel="stylesheet" href="../../static/css/admin/view-post.css">
+<title>浏览文章的标题</title>
+</head>
+<body>
+<div class="container-fluid display-table" >
+	<div class="row display-table-row">
+		<!--侧边栏-->
+		{{template "sideMenu" .}}
+		<!--main content area-->
+		
+		<!--浏览-->
+		<div>
+			<header class="clearfix">
+				<h2 class="page-title pull-left">查看文章</h2>
+			</header>
+			<!-- Blog Post Content Column -->
+			<div class="col-lg-12 col-md-12">
+				
+				<!-- Blog Post -->
+				
+				<!-- Title -->
+				<h1 class="article-title">{{ .ViewPost.Title}}</h1>
+				<!---->
+				<!-- Author -->
+				<p class="article-tag">
+					<span class="label label-success label-sm">{{ .ViewPost.Tag}}</span>
+				</p>
+				
+				<hr>
+				
+				<!-- Date/Time -->
+				<p class="article-created"><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+				<p class="article-updated"><span class="glyphicon glyphicon-time"></span> Updated on August 24, 2013 at 9:00 PM</p>
+				
+				<hr>
+				
+				<!-- Post Content -->
+				<p class="article-content">
+					{{ .ViewPost.Content}}
+				</p>
+			</div>
+			<!--页脚-->
+			{{template "footer" .}}
+		</div>
+	</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../static/js/bootstrap.min.js"></script>
+</body>
+</html>

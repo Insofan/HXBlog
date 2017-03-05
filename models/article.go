@@ -4,17 +4,15 @@ import (
 	"time"
 	"github.com/astaxie/beego/orm"
 	"github.com/russross/blackfriday"
-	"math/rand"
 	"github.com/astaxie/beego"
 )
 
 //结构体Article
 type Article struct {
 	Id      int64
-	Uid     int64 `orm:"unique"`
 	Title   string `orm:"size(50)"`
 	Content string `orm:"size(5000)"`
-	Tag     string
+	Tag     string  `orm:"index"`
 	Created time.Time `orm:"index"`
 	Updated time.Time `orm:"index"`
 	Views   int64     `orm:"index"`
@@ -24,10 +22,10 @@ func CreateMarkdown(title, tag, content string) error {
 	o := orm.NewOrm()
 	var articleContent = string(blackfriday.MarkdownCommon([]byte(content)))
 	article := &Article{
-		Uid:   int64(rand.Intn(100000)),
-		Title: title,
+		Title:   title,
 		Content: articleContent,
-		Tag:     "Go",
+		//Content: content,
+		Tag:     tag,
 		Created: time.Now(),
 		Updated: time.Now(),
 		Views:   0,
@@ -42,7 +40,7 @@ func CreateMarkdown(title, tag, content string) error {
 	return err
 }
 
-func GetArticles() ([]*Article, error) {
+func GetAllArticles() ([]*Article, error) {
 	o := orm.NewOrm()
 	articles := make([]*Article, 0)
 	
@@ -50,4 +48,16 @@ func GetArticles() ([]*Article, error) {
 	_, err := qs.All(&articles)
 	
 	return articles, err
+}
+
+func GetArticle() (Article) {
+	o := orm.NewOrm()
+	article := Article{}
+	qs := o.QueryTable("Article")
+	err := qs.Filter("Id", 5).One(&article)
+	if err != nil {
+		beego.Error(err)
+	}
+	
+	return article
 }

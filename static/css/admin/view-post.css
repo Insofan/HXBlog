@@ -1,0 +1,23 @@
+
+.article-title{
+	color: red;
+	text-align: center;
+}
+
+.article-tag{
+	text-align: center;
+	font-size: 20px;
+}
+
+.article-created{
+	text-align: center;
+}
+.article-content{
+	margin: 20px;
+	text-align:left;
+}
+
+
+.article-updated{
+	text-align: center;
+}

@@ -19,7 +19,7 @@ func (self *CreateArticleMarkdownController) Post() {
 	fmt.Println("mdcreate")
 	
 	title := self.Input().Get("articleTitle")
-	tag := "Go"
+	tag := self.Input().Get("tags")
 	content := self.Input().Get("content")
 	fmt.Printf("mdtitle %s\n", title)
 	fmt.Printf("mdtag %s\n", tag)

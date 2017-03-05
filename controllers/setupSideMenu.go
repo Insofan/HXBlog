@@ -2,7 +2,8 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	"HXBlog/models"
+	//"HXBlog/models"
+	"fmt"
 )
 
 func SetupSideMenu(controller beego.Controller) {
@@ -10,12 +11,10 @@ func SetupSideMenu(controller beego.Controller) {
 	//
 	//	controller.Redirect("/login", 302)
 	//}
-	var err error
-	//var tags = [4]string{"Go", "Swift", "ObjC", "Other"}
-	controller.Data["Tag"], err = models.GetTags()
+	var tags = [4]string{"Go", "Swift", "ObjC", "Other"}
+	controller.Data["Tag"] = tags
+	fmt.Println("sidemenu%s", tags)
 	
 	//controller.Data["Tag"] = tags
-	if err != nil {
-		beego.Error(err)
-	}
+
 }

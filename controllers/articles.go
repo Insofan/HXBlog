@@ -13,7 +13,7 @@ type ArticlesController struct {
 func (self *ArticlesController) Get() {
 	var err error
 	//取得所有文章
-	self.Data["Articles"], err = models.GetArticles()
+	self.Data["Articles"], err = models.GetAllArticles()
 	if err != nil {
 		beego.Error(err)
 	}

@@ -11,7 +11,7 @@
 		</li>
 		
 		<li class="link">
-			<a href="/admin/articles.html">
+			<a href="/admin/articles">
 				<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
 				<span class="hidden-xs hidden-sm" >浏览文章</span>
 				<span class="label label-success pull-right hidden-xs hidden-sm">20</span>
@@ -27,8 +27,8 @@
 				<span class="hidden-xs hidden-sm" >创建</span>
 			</a>
 			<ul class="collapse collapseable" id="collapse-create">
-				<li><a href="/admin/create-article-markdown.html">创建Markdown文章</a></li>
-				<li><a href="create-article-normal.html">创建普通文章</a></li>
+				<li><a href="/admin/create-article-markdown">创建Markdown文章</a></li>
+				<li><a href="create-article-normal">创建普通文章</a></li>
 			</ul>
 		</li>
 		
@@ -41,10 +41,14 @@
 			</a>
 			
 			<ul class="collapse collapseable" id="collapse-comments">
-				{{range .Tag}}
-				<li><a href="/category/{{.Title}}">{{.Title}}<span class="label label-success pull-right hidden-xs hidden-sm">{{.Total}}</span></a>
+				<li><a href="/category/{{.Title}}">Go<span class="label label-success pull-right hidden-xs hidden-sm">{{.Total}}</span></a>
 				</li>
-				{{end}}
+				<li><a href="/category/{{.Title}}">Swift<span class="label label-success pull-right hidden-xs hidden-sm">{{.Total}}</span></a>
+				</li>
+				<li><a href="/category/{{.Title}}">ObjC<span class="label label-success pull-right hidden-xs hidden-sm">{{.Total}}</span></a>
+				</li>
+				<li><a href="/category/{{.Title}}">Other<span class="label label-success pull-right hidden-xs hidden-sm">{{.Total}}</span></a>
+				</li>
 				<!--<li role="separator" class="divider"><a name="plus">-->
 					<!--<span class="glyphicon glyphicon-plus"></span>添加-->
 				<!--</a>-->

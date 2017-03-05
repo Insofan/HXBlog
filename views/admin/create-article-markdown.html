@@ -30,14 +30,13 @@
 						</div>
 						<div class="form-group">
 							<label class="sr-only">标签</label>
-							<select data-placeholder="选择标签" multiple name="tags" class="form-control chosen-select">
-								{{range .Tag}}
-								<option>{{.Title}}</option>
-								{{end}}
+							<select data-placeholder="选择标签" name="tags" class="form-control chosen-select">
+								<option value="Go">Go</option>
+								<option value="Swift">Swift</option>
+								<option value="ObjC">ObjC</option>
+								<option value="Other">Other</option>
 							</select>
-						
 						</div>
-						
 						
 						<div class="form-group">
 							<label class="sr-only">内容</label>
