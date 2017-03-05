@@ -12,12 +12,13 @@ func init() {
 	
 	//beego.Router("/login", &controllers.LoginController{})
 	beego.Router("/login", &controllers.LoginController{},"get:Get")
-	beego.Router("/login", &controllers.LoginController{},"*:Login")
+	beego.Router("/login", &controllers.LoginController{}, "*:Login")
 	
 	//后台路由
-	beego.Router("/admin", &controllers.AdminController{},"get:Get")
-	beego.Router("/admin", &controllers.AdminController{},"post:Post")
-	beego.Router("/admin/create-article-markdown", &controllers.CreateArticleMarkdownController{})
+	beego.Router("/admin", &controllers.AdminController{}, "get:Get")
+	beego.Router("/admin", &controllers.AdminController{}, "post:Post")
+	beego.Router("/admin/create-article-markdown", &controllers.CreateArticleMarkdownController{}, "get:Get")
+	beego.Router("/admin/create-article-markdown", &controllers.CreateArticleMarkdownController{}, "post:Post")
 	beego.Router("/admin/create-article-normal", &controllers.CreateArticleNormalController{})
 	beego.Router("/admin/articles", &controllers.ArticlesController{})
 	

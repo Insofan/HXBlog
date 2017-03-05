@@ -15,11 +15,13 @@ func (self *CreateArticleMarkdownController) Get() {
 	self.TplName = "admin/create-article-markdown.html"
 }
 
-func (self *CreateArticleMarkdownController) Post()  {
+func (self *CreateArticleMarkdownController) Post() {
+	fmt.Println("mdcreate")
 	
-	fmt.Println("Logoutsucess")
-	self.Redirect("/login", 302)
-	var user models.User
-	user.Logout()
-	
+	title := self.Input().Get("articleTitle")
+	tag := "Go"
+	content := self.Input().Get("content")
+	fmt.Printf("mdtitle %s\n", title)
+	fmt.Printf("mdtag %s\n", tag)
+	models.CreateMarkdown(title, tag, content)
 }
