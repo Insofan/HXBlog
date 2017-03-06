@@ -47,7 +47,7 @@
 						</div>
 						<div class="col-md-8 col-sm-6 col-xs-10 article-title">
 							<h4>{{ .Title }}</h4>
-							<p>{{ .Content }}</p>
+							<p> {{html2str .Content}}</p>
 							<small>{{ .Created }}</small>
 						</div>
 						<div class="col-md-3 col-sm-5 col-xs-10 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">

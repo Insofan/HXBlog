@@ -22,6 +22,7 @@ func CreateMarkdown(title, tag, content string) error {
 	o := orm.NewOrm()
 	var articleContent = string(blackfriday.MarkdownCommon([]byte(content)))
 	//unsafe := blackfriday.MarkdownCommon(content)
+	 
 	article := &Article{
 		Title:   title,
 		Content: articleContent,
@@ -54,7 +55,7 @@ func GetArticle() (Article) {
 	o := orm.NewOrm()
 	article := Article{}
 	qs := o.QueryTable("Article")
-	err := qs.Filter("Id", 5).One(&article)
+	err := qs.Filter("Id", 9).One(&article)
 	if err != nil {
 		beego.Error(err)
 	}

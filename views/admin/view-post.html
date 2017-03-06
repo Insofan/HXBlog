@@ -30,15 +30,17 @@
 				<hr>
 				
 				<!-- Date/Time -->
-				<p class="article-created"><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
-				<p class="article-updated"><span class="glyphicon glyphicon-time"></span> Updated on August 24, 2013 at 9:00 PM</p>
+				<p class="article-created"><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at
+					9:00 PM</p>
+				<p class="article-updated"><span class="glyphicon glyphicon-time"></span> Updated on August 24, 2013 at
+					9:00 PM</p>
 				
 				<hr>
 				
 				<!-- Post Content -->
-				<p class="article-content">
-					{{ .ViewPostContent}}
-				</p>
+				<div class="article-content">
+					{{str2html .ViewPost.Content}}
+				</div>
 			</div>
 			<!--页脚-->
 			{{template "footer" .}}
