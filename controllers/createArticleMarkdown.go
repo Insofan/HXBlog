@@ -18,10 +18,9 @@ func (self *CreateArticleMarkdownController) Get() {
 func (self *CreateArticleMarkdownController) Post() {
 	fmt.Println("mdcreate")
 	
+	//创建markdown文章
 	title := self.Input().Get("articleTitle")
 	tag := self.Input().Get("tags")
 	content := self.Input().Get("content")
-	fmt.Printf("mdtitle %s\n", title)
-	fmt.Printf("mdtag %s\n", tag)
 	models.CreateMarkdown(title, tag, content)
 }

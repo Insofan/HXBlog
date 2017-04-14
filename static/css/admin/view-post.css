@@ -1,6 +1,6 @@
 
 .article-title{
-	color: red;
+	color: #3c3c3c;
 	text-align: center;
 }
 
@@ -14,7 +14,7 @@
 }
 .article-content{
 	margin: 40px;
-	text-align:center;
+	text-align:left;
 }
 
 

@@ -13,13 +13,16 @@ type CreateArticleNormalController struct {
 func (self *CreateArticleNormalController) Get() {
 	SetupSideMenu(self.Controller)
 	self.TplName = "admin/create-article-normal.html"
+	
 }
 
 func (self *CreateArticleNormalController) Post() {
 	
-	fmt.Println("Logoutsucess")
-	self.Redirect("/login", 302)
-	var user models.User
-	user.Logout()
+	//创建markdown文章
+	title := self.Input().Get("articleTitle")
+	tag := self.Input().Get("tags")
+	content := self.Input().Get("content")
+	fmt.Printf("createnormalpost%s",content)
+	models.CreateNormal(title, tag, content)
 	
 }

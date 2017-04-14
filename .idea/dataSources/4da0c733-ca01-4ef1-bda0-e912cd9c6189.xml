@@ -40,13 +40,15 @@
     </column>
     <column id="15" parent="8" name="created">
       <Position>5</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="16" parent="8" name="updated">
       <Position>6</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="17" parent="8" name="views">
       <Position>7</Position>
