@@ -1,35 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<!--头像-->
-	<link rel="shortcut icon" href="/static/img/superman.jpg" />
-	
-	<!-- Bootstrap -->
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-	
-	<script src="../../static/js/chosen.jquery.min.js"></script>
-	<!--summernote-->
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
-	
-	<link rel="stylesheet" href="../../static/css/admin/default.css">
-	<link rel="stylesheet" href="../../static/css/admin/create-article.css">
-	<link rel="stylesheet" href="../../static/css/chosen.min.css">
-	
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<![endif]-->
+{{template "head"}}
+<link rel="stylesheet" href="../../static/css/admin/create-article.css">
+<link rel="stylesheet" href="../../static/css/chosen.min.css">
+
+<!--summernote-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
+
 </head>
 <body>
-
-
 <div class="container-fluid display-table">
 	<div class="row display-table-row">
 		{{template "sideMenu" .}}
@@ -64,10 +42,10 @@
 							</select>
 						</div>
 						
-						<div class="form-group" >
+						<div class="form-group">
 							<label class="sr-only">内容</label>
-							<textarea id="summernote" class="summernote" placeholder="文章内容" name="content">文章内容</textarea>
-							
+							<textarea class="form-control" placeholder="文章内容" name="article"
+							          id="summernote">Hello Summernote</textarea>
 						</div>
 						
 						<div class="checkbox">
@@ -89,6 +67,11 @@
 	
 	{{template "footer" .}}
 </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/js/chosen.jquery.min.js"></script>
 
 <script type="text/javascript">
     var config = {
@@ -101,15 +84,6 @@
     for (var selector in config) {
         $(selector).chosen(config[selector]);
     }
-</script>
-
-<script>
-    $('#summernote').summernote({
-        height: 300,                 // set editor height
-        minHeight: null,             // set minimum height of editor
-        maxHeight: null,             // set maximum height of editor
-        focus: true                  // set focus to editable area after initializing summernote
-    });
 </script>
 
 </body>

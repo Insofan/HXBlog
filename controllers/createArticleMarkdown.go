@@ -3,7 +3,6 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"HXBlog/models"
-	"fmt"
 )
 
 type CreateArticleMarkdownController struct {
@@ -16,7 +15,6 @@ func (self *CreateArticleMarkdownController) Get() {
 }
 
 func (self *CreateArticleMarkdownController) Post() {
-	fmt.Println("mdcreate")
 	
 	//创建markdown文章
 	title := self.Input().Get("articleTitle")

@@ -22,6 +22,7 @@ func (self *CreateArticleNormalController) Post() {
 	title := self.Input().Get("articleTitle")
 	tag := self.Input().Get("tags")
 	content := self.Input().Get("content")
+	
 	fmt.Printf("createnormalpost%s",content)
 	models.CreateNormal(title, tag, content)
 	
