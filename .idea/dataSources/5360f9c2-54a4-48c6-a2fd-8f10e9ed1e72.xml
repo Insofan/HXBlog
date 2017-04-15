@@ -6,164 +6,165 @@
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <schema id="3" parent="1" name="information_schema"/>
-    <schema id="4" parent="1" name="mysql"/>
-    <schema id="5" parent="1" name="performance_schema"/>
-    <schema id="6" parent="1" name="sys"/>
-    <schema id="7" parent="1" name="goblog"/>
-    <table id="8" parent="2" name="article"/>
-    <table id="9" parent="2" name="tag"/>
-    <table id="10" parent="2" name="user"/>
-    <column id="11" parent="8" name="id">
+    <schema id="3" parent="1" name="books"/>
+    <schema id="4" parent="1" name="goblog"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <table id="9" parent="2" name="article"/>
+    <table id="10" parent="2" name="tag"/>
+    <table id="11" parent="2" name="user"/>
+    <column id="12" parent="9" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="12" parent="8" name="title">
+    <column id="13" parent="9" name="title">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="13" parent="8" name="content">
+    <column id="14" parent="9" name="content">
       <Position>3</Position>
       <DataType>varchar(5000)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="14" parent="8" name="tag">
+    <column id="15" parent="9" name="tag">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="15" parent="8" name="created">
+    <column id="16" parent="9" name="created">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="16" parent="8" name="updated">
+    <column id="17" parent="9" name="updated">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="17" parent="8" name="views">
+    <column id="18" parent="9" name="views">
       <Position>7</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="18" parent="8" name="article_created">
+    <index id="19" parent="9" name="article_created">
       <ColNames>created</ColNames>
     </index>
-    <index id="19" parent="8" name="article_tag">
+    <index id="20" parent="9" name="article_tag">
       <ColNames>tag</ColNames>
     </index>
-    <index id="20" parent="8" name="article_updated">
+    <index id="21" parent="9" name="article_updated">
       <ColNames>updated</ColNames>
     </index>
-    <index id="21" parent="8" name="article_views">
+    <index id="22" parent="9" name="article_views">
       <ColNames>views</ColNames>
     </index>
-    <key id="22" parent="8" name="PRIMARY">
+    <key id="23" parent="9" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="23" parent="9" name="id">
+    <column id="24" parent="10" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="9" name="go">
+    <column id="25" parent="10" name="go">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="25" parent="9" name="swift">
+    <column id="26" parent="10" name="swift">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="26" parent="9" name="obj_c">
+    <column id="27" parent="10" name="obj_c">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="27" parent="9" name="other">
+    <column id="28" parent="10" name="other">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="28" parent="9" name="created">
+    <column id="29" parent="10" name="created">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="9" name="updated">
+    <column id="30" parent="10" name="updated">
       <Position>7</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="9" name="views">
+    <column id="31" parent="10" name="views">
       <Position>8</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="31" parent="9" name="tag_created">
+    <index id="32" parent="10" name="tag_created">
       <ColNames>created</ColNames>
     </index>
-    <index id="32" parent="9" name="tag_updated">
+    <index id="33" parent="10" name="tag_updated">
       <ColNames>updated</ColNames>
     </index>
-    <index id="33" parent="9" name="tag_views">
+    <index id="34" parent="10" name="tag_views">
       <ColNames>views</ColNames>
     </index>
-    <key id="34" parent="9" name="PRIMARY">
+    <key id="35" parent="10" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="35" parent="10" name="id">
+    <column id="36" parent="11" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="36" parent="10" name="username">
+    <column id="37" parent="11" name="username">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="37" parent="10" name="password">
+    <column id="38" parent="11" name="password">
       <Position>3</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="38" parent="10" name="is_login">
+    <column id="39" parent="11" name="is_login">
       <Position>4</Position>
       <DataType>tinyint(4)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="39" parent="10" name="username">
+    <index id="40" parent="11" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="40" parent="10" name="PRIMARY">
+    <key id="41" parent="11" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="41" parent="10" name="username">
+    <key id="42" parent="11" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>

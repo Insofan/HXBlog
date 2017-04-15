@@ -19,7 +19,8 @@ func init() {
 	beego.Router("/admin", &controllers.AdminController{}, "post:Post")
 	beego.Router("/admin/create-article-markdown", &controllers.CreateArticleMarkdownController{}, "get:Get")
 	beego.Router("/admin/create-article-markdown", &controllers.CreateArticleMarkdownController{}, "post:Post")
-	beego.Router("/admin/view-post", &controllers.ViewPostController{})
+	beego.Router("/admin/articles/view-post/?:id", &controllers.ViewPostController{})
+	
 	beego.Router("/admin/create-article-normal", &controllers.CreateArticleNormalController{}, "get:Get")
 	beego.Router("/admin/create-article-normal", &controllers.CreateArticleNormalController{}, "post:Post")
 	beego.Router("/admin/articles", &controllers.ArticlesController{})

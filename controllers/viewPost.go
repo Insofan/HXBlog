@@ -10,5 +10,7 @@ type ViewPostController struct {
 
 func (self *ViewPostController) Get() {
 	self.TplName = "admin/view-post.html"
-	self.Data["ViewPost"] = models.GetArticle()
+	articleId := self.Ctx.Input.Param(":id")
+	self.Data["ViewPost"] = models.GetArticle(articleId)
+	
 }

@@ -9,7 +9,6 @@
 <form class="container-fluid display-table" style="width: 100%">
 	<div class="row display-table-row">
 		{{template "sideMenu" .}}
-		
 			
 			<!--main content area-->
 			
@@ -46,13 +45,16 @@
 							{{end}}
 						</div>
 						<div class="col-md-8 col-sm-6 col-xs-10 article-title">
-							<h4 href="/admin/view-post">{{ .Title }}</h4>
+							<a href="/admin/articles/view-post/{{ .Id}}">
+								<h4 style="color: #262626"> {{ .Title}} </h4>
+							</a>
+							
 							<p> {{html2str .Content}}</p>
 							<small>{{ .Created }}</small>
 						</div>
 						<div class="col-md-3 col-sm-5 col-xs-10 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
 							<div class="active-actions">
-								<a class="btn btn-xs btn-default" href="/admin/view-post" role="button">
+								<a class="btn btn-xs btn-default" href="/admin/articles/view-post/{{ .Id}}" role="button">
 									<span class="glyphicon glyphicon-folder-open" aria-hidden="true" >&nbsp;查看</span>
 								</a>
 								

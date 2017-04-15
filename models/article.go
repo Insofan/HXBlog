@@ -77,11 +77,11 @@ func GetAllArticles() ([]*Article, error) {
 	return articles, err
 }
 
-func GetArticle() (Article) {
+func GetArticle(articleId string) (Article) {
 	o := orm.NewOrm()
 	article := Article{}
 	qs := o.QueryTable("Article")
-	err := qs.Filter("Id", 1).One(&article)
+	err := qs.Filter("Id", articleId).One(&article)
 	if err != nil {
 		beego.Error(err)
 	}
