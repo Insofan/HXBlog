@@ -21,4 +21,6 @@ func (self *CreateArticleMarkdownController) Post() {
 	tag := self.Input().Get("tags")
 	content := self.Input().Get("content")
 	models.CreateMarkdown(title, tag, content)
+	
+	self.Redirect("/admin/articles", 302)
 }

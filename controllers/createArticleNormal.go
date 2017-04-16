@@ -26,4 +26,6 @@ func (self *CreateArticleNormalController) Post() {
 	fmt.Printf("createnormalpost%s",content)
 	models.CreateNormal(title, tag, content)
 	
+	self.Redirect("/admin/articles", 302)
+	
 }
