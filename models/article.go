@@ -88,3 +88,9 @@ func GetArticle(articleId string) (Article) {
 	
 	return article
 }
+
+//分页
+func Pagenation() {
+	
+}
+

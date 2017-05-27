@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:db_hxblog</introspection-schemas>
       <resolve-scope>db_hxblog:</resolve-scope>
+      <unqualified-resolve-schemas>db_hxblog:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
